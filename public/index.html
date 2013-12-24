@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Study Pet!</title>
+	<script type='text/javascript'>
+		var foo = null;
+
+		function grow() {
+			foo.style.width = parseInt(foo.style.width)+1+'px';
+			setTimeout(grow, 100);
+		}
+
+		function init() {
+			foo = document.getElementById('studypet');
+			foo.style.width='50px';
+			grow();
+		}
+
+		window.onload = init;
+	</script>
+</head>
+<body>
+ <img id='studypet' src='img/cute.gif'>
+ </body>
+</html>
