@@ -1,6 +1,7 @@
 var app = {
 	initialize: function() {
 		this.bindEvents();
+		this.menuNav();
 	},
 
 	bindEvents: function() {
@@ -9,6 +10,13 @@ var app = {
 
 	onDeviceReady: function() {
 		app.receivedEvent('deviceready');
+	},
+
+	menuNav: function() {
+		$('#nav a').on('click', function(event){
+			event.preventDefault();
+			window.location = this.href;
+		})
 	}
 	
 }

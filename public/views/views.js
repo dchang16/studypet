@@ -23,3 +23,33 @@ var HomeView = Backbone.View.extend({
                 return this;
         }
 });
+
+var Pet1View = Backbone.View.extend({
+        render: function() {
+                $.get('templates/pet1.html', function(incomingTemplate){
+                        var template = Handlebars.compile(incomingTemplate);
+                        $('#page_container').html(template).trigger('create');
+                })
+                return this;
+        }
+});
+
+var Pet2View = Backbone.View.extend({
+        render: function() {
+                $.get('templates/pet2.html', function(incomingTemplate){
+                        var template = Handlebars.compile(incomingTemplate);
+                        $('#page_container').html(template).trigger('create');
+                })
+                return this;
+        }
+});
+
+var Pet3View = Backbone.View.extend({
+        render: function() {
+                $.get('templates/pet3.html', function(incomingTemplate){
+                        var template = Handlebars.compile(incomingTemplate);
+                        $('#page_container').html(template).trigger('create');
+                })
+                return this;
+        }
+});
