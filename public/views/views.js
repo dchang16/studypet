@@ -29,9 +29,18 @@ var Pet1View = Backbone.View.extend({
                 $.get('templates/pet1.html', function(incomingTemplate){
                         var template = Handlebars.compile(incomingTemplate);
                         $('#page_container').html(template).trigger('create');
+                        pet = document.getElementById('pet1');
+                        if(localStorage.getItem('pet1size') == null || !(localStorage.getItem('pet1size') > 0)) {
+                                pet.style.width='50px';
+                        }
+                        else {
+                                console.log(localStorage.getItem('pet1size'))
+                                pet.style.width = localStorage.getItem('pet1size')+'px';
+                        }
+                        app.grow();
                 })
                 return this;
-        }
+        },
 });
 
 var Pet2View = Backbone.View.extend({
@@ -39,6 +48,15 @@ var Pet2View = Backbone.View.extend({
                 $.get('templates/pet2.html', function(incomingTemplate){
                         var template = Handlebars.compile(incomingTemplate);
                         $('#page_container').html(template).trigger('create');
+                        pet = document.getElementById('pet2');
+                        if(localStorage.getItem('pet2size') == null || !(localStorage.getItem('pet2size') > 0)) {
+                                pet.style.width='50px';
+                        }
+                        else {
+                                console.log(localStorage.getItem('pet2size'))
+                                pet.style.width = localStorage.getItem('pet2size')+'px';
+                        }
+                        app.grow();
                 })
                 return this;
         }
@@ -49,6 +67,15 @@ var Pet3View = Backbone.View.extend({
                 $.get('templates/pet3.html', function(incomingTemplate){
                         var template = Handlebars.compile(incomingTemplate);
                         $('#page_container').html(template).trigger('create');
+                        pet = document.getElementById('pet3');
+                        if(localStorage.getItem('pet3size') == null || !(localStorage.getItem('pet3size') > 0)) {
+                                pet.style.width='50px';
+                        }
+                        else {
+                                console.log(localStorage.getItem('pet3size'))
+                                pet.style.width = localStorage.getItem('pet3size')+'px';
+                        }
+                        app.grow();
                 })
                 return this;
         }
