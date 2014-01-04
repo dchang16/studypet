@@ -37,7 +37,12 @@ var Pet1View = Backbone.View.extend({
                                 if(localStorage.getItem('pet1size') > 100) {
                                         pet.src = 'img/pet1.gif'
                                 }
-                                pet.style.width = localStorage.getItem('pet1size')+'px';
+                                if(localStorage.getItem('pet1size') > 400) {
+                                        pet.style.width = '400px'
+                                }
+                                else {
+                                        pet.style.width = localStorage.getItem('pet1size')+'px';
+                                }
                         }
                         app.grow();
                 })
@@ -58,7 +63,12 @@ var Pet2View = Backbone.View.extend({
                                 if(localStorage.getItem('pet2size') > 100) {
                                         pet.src = 'img/pet2.gif'
                                 }
-                                pet.style.width = localStorage.getItem('pet2size')+'px';
+                                if(localStorage.getItem('pet2size') > 400) {
+                                        pet.style.width = '400px'
+                                }
+                                else {
+                                        pet.style.width = localStorage.getItem('pet2size')+'px';
+                                }
                         }
                         app.grow();
                 })
@@ -79,7 +89,12 @@ var Pet3View = Backbone.View.extend({
                                 if(localStorage.getItem('pet3size') > 100) {
                                         pet.src = 'img/pet3.gif'
                                 }
-                                pet.style.width = localStorage.getItem('pet3size')+'px';
+                                if(localStorage.getItem('pet3size') > 400) {
+                                        pet.style.width = '400px'
+                                }
+                                else {
+                                        pet.style.width = localStorage.getItem('pet3size')+'px';
+                                }
                         }
                         app.grow();
                 })
