@@ -39,7 +39,7 @@ var app = {
 		app.checkConnection();
 		if(networkState == 'none') {
 			pet.style.width = parseInt(pet.style.width)+1+'px';
-			setTimeout(app.grow, 100000);
+			setTimeout(app.grow, 200000);
 			localStorage.setItem(pet.id + 'size', parseInt(pet.style.width));
 		}
 		else {
