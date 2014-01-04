@@ -1,4 +1,5 @@
 var pet = null;
+var networkState = null;
 
 var app = {
 	initialize: function() {
@@ -9,10 +10,12 @@ var app = {
 
 	bindEvents: function() {
 		document.addEventListener('deviceready', this.onDeviceReady, false);
+		// document.addEventListener('online', app.checkConnection(), false);
+		// document.addEventListener('offline', app.checkConnection(), false);
 	},
 
 	onDeviceReady: function() {
-		app.receivedEvent('deviceready');
+		app.checkConnection()
 	},
 
 	menuNav: function() {
@@ -22,10 +25,29 @@ var app = {
 		})
 	},
 
+	checkConnection: function() {
+		document.addEventListener('online', function() {
+			console.log('online');
+			networkState = 'online';
+		}, false);
+		document.addEventListener('offline', function() {
+			console.log('offline');
+			networkState = 'none';
+		}, false);
+
+	},
+
 	grow: function() {
-		pet.style.width = parseInt(pet.style.width)+1+'px';
-		setTimeout(app.grow, 100000);
-		localStorage.setItem(pet.id + 'size', parseInt(pet.style.width));
+		app.checkConnection();
+		console.log(networkState);
+		if(networkState == 'none') {
+			pet.style.width = parseInt(pet.style.width)+1+'px';
+			setTimeout(app.grow, 100000);
+			localStorage.setItem(pet.id + 'size', parseInt(pet.style.width));
+		}
+		else {
+			console.log('You are connected to internet!');
+		}
 	}
 	
 }

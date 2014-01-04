@@ -34,7 +34,6 @@ var Pet1View = Backbone.View.extend({
                                 pet.style.width='50px';
                         }
                         else {
-                                console.log(localStorage.getItem('pet1size'))
                                 pet.style.width = localStorage.getItem('pet1size')+'px';
                         }
                         app.grow();
@@ -53,7 +52,6 @@ var Pet2View = Backbone.View.extend({
                                 pet.style.width='50px';
                         }
                         else {
-                                console.log(localStorage.getItem('pet2size'))
                                 pet.style.width = localStorage.getItem('pet2size')+'px';
                         }
                         app.grow();
@@ -72,7 +70,6 @@ var Pet3View = Backbone.View.extend({
                                 pet.style.width='50px';
                         }
                         else {
-                                console.log(localStorage.getItem('pet3size'))
                                 pet.style.width = localStorage.getItem('pet3size')+'px';
                         }
                         app.grow();
