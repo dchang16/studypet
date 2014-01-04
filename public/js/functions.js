@@ -6,13 +6,10 @@ var app = {
 		this.bindEvents();
 		this.menuNav();
 		this.checkConnection();
-		alert('This is your studypet. You can love and care for your studypet by not procasinating by turning off your wifi, data and study! Your pet will grow the more you love it.');
 	},
 
 	bindEvents: function() {
 		document.addEventListener('deviceready', this.onDeviceReady, false);
-		// document.addEventListener('online', app.checkConnection(), false);
-		// document.addEventListener('offline', app.checkConnection(), false);
 	},
 
 	onDeviceReady: function() {
@@ -40,7 +37,6 @@ var app = {
 
 	grow: function() {
 		app.checkConnection();
-		console.log(networkState);
 		if(networkState == 'none') {
 			pet.style.width = parseInt(pet.style.width)+1+'px';
 			setTimeout(app.grow, 100000);
