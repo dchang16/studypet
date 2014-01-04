@@ -5,6 +5,7 @@ var app = {
 	initialize: function() {
 		this.bindEvents();
 		this.menuNav();
+		this.checkConnection();
 		alert('This is your studypet. You can love and care for your studypet by not procasinating by turning off your wifi, data and study! Your pet will grow the more you love it.');
 	},
 

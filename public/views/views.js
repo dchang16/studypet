@@ -34,6 +34,9 @@ var Pet1View = Backbone.View.extend({
                                 pet.style.width='50px';
                         }
                         else {
+                                if(localStorage.getItem('pet1size') > 100) {
+                                        pet.src = 'img/pet1.gif'
+                                }
                                 pet.style.width = localStorage.getItem('pet1size')+'px';
                         }
                         app.grow();
@@ -52,6 +55,9 @@ var Pet2View = Backbone.View.extend({
                                 pet.style.width='50px';
                         }
                         else {
+                                if(localStorage.getItem('pet2size') > 100) {
+                                        pet.src = 'img/pet2.gif'
+                                }
                                 pet.style.width = localStorage.getItem('pet2size')+'px';
                         }
                         app.grow();
@@ -70,6 +76,9 @@ var Pet3View = Backbone.View.extend({
                                 pet.style.width='50px';
                         }
                         else {
+                                if(localStorage.getItem('pet3size') > 100) {
+                                        pet.src = 'img/pet3.gif'
+                                }
                                 pet.style.width = localStorage.getItem('pet3size')+'px';
                         }
                         app.grow();
