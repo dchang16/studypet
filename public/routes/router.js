@@ -1,6 +1,7 @@
 var Router = Backbone.Router.extend({
         routes: {
                 '': 'home',
+                'about': 'about',
                 'home' : 'home',
                 'pet1' : 'pet1',
                 'pet2' : 'pet2',
@@ -15,6 +16,11 @@ app_router.on('route:home', function() {
 	home.render();
 });
 
+app_router.on('route:about', function() {
+	console.log('Page is taking you to your about page');
+	about.render();
+});
+
 
 app_router.on('route:pet1', function() {
 	console.log('Page is taking you to your first pet');
@@ -27,6 +33,6 @@ app_router.on('route:pet2', function() {
 });
 
 app_router.on('route:pet3', function() {
-	console.log('Page is taking you to your first pet');
+	console.log('Page is taking you to your third pet');
 	pet3.render();
 });

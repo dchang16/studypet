@@ -19,6 +19,20 @@ var HomeView = Backbone.View.extend({
                 $.get('templates/home.html', function(incomingTemplate){
                         var template = Handlebars.compile(incomingTemplate);
                         $('#page_container').html(template).trigger('create');
+                        $('#pets a').on('click', function(event){
+                                event.preventDefault();
+                                window.location = this.href;    
+                        })
+                })
+                return this;
+        }
+});
+
+var AboutView = Backbone.View.extend({
+        render: function() {
+                $.get('templates/about.html', function(incomingTemplate){
+                        var template = Handlebars.compile(incomingTemplate);
+                        $('#page_container').html(template).trigger('create');
                 })
                 return this;
         }
