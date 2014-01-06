@@ -25,14 +25,15 @@ var app = {
 
 	checkConnection: function() {
 		document.addEventListener('online', function() {
-			console.log('online');
+			var status = document.getElementById('status');
 			networkState = 'online';
+			status.innerHTML = 'Status: Online!';
 		}, false);
 		document.addEventListener('offline', function() {
-			console.log('offline');
+			var status = document.getElementById('status');
 			networkState = 'none';
+			status.innerHTML = 'Status: Offline!';
 		}, false);
-
 	},
 
 	grow: function() {
