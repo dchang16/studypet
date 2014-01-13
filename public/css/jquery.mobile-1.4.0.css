@@ -973,10 +973,10 @@ html .ui-panel-page-container-a {
 html .ui-bar-a a,
 html .ui-body-a a,
 html body .ui-group-theme-a a {
-	color: #3388cc /*{a-link-color}*/;
-	font-weight: bold;
+	/*color: #3388cc /*{a-link-color}*/;
+	/*font-weight: bold;*/*/
 }
-.ui-page-theme-a a:visited,
+/*.ui-page-theme-a a:visited,*/
 html .ui-bar-a a:visited,
 html .ui-body-a a:visited,
 html body .ui-group-theme-a a:visited {
